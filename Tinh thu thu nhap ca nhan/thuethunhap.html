@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính Thuế Thu Nhập Cá Nhân</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- Container chính -->
+    <div class="container mx-auto p-4">
+      <h1 class="text-3xl font-bold text-blue-600 mb-6">
+        Tính Thuế Thu Nhập Cá Nhân
+      </h1>
+
+      <!-- Form nhập dữ liệu -->
+      <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+            Họ và tên
+          </label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Nhập họ và tên"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="income"
+          >
+            Tổng thu nhập năm (triệu VND)
+          </label>
+          <input
+            id="income"
+            type="number"
+            placeholder="Nhập tổng thu nhập"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="dependents"
+          >
+            Số người phụ thuộc
+          </label>
+          <input
+            id="dependents"
+            type="number"
+            placeholder="Nhập số người phụ thuộc"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        </div>
+
+        <div class="flex items-center justify-between">
+          <button
+            onclick="calculateTax()"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Tính thuế
+          </button>
+        </div>
+      </div>
+
+      <!-- Kết quả -->
+      <div id="result" class="text-gray-700 font-bold text-lg mt-4"></div>
+    </div>
+
+    <script src="./thuthunhap.js"></script>
+  </body>
+</html>

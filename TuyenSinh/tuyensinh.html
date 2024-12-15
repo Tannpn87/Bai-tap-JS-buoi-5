@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý tuyển sinh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-1/3">
+      <h1 class="text-2xl font-bold mb-4 text-center">Quản Lý Tuyển Sinh</h1>
+      <form id="admissionForm">
+        <div class="mb-4 flex items-center">
+          <label for="diemChuan" class="block font-semibold text-red-700 w-1/3"
+            >Điểm chuẩn:</label
+          >
+          <input
+            type="number"
+            id="diemChuan"
+            placeholder="Nhập điểm chuẩn"
+            class="mt-1 block w-full border-red-800 rounded-md shadow-sm w-2/3"
+          />
+        </div>
+        <div class="mb-4 flex items-center">
+          <label for="diemMon1" class="block text-gray-700 w-1/3"
+            >Điểm môn 1:</label
+          >
+          <input
+            type="number"
+            id="diemMon1"
+            placeholder="Nhập điểm môn 1"
+            class="mt-1 block w-full border-gray-300 rounded-md shadow-sm w-2/3"
+          />
+        </div>
+        <div class="mb-4 flex items-center">
+          <label for="diemMon2" class="block text-gray-700 w-1/3"
+            >Điểm môn 2:</label
+          >
+          <input
+            type="number"
+            id="diemMon2"
+            placeholder="Nhập điểm môn 2"
+            class="mt-1 block w-full border-gray-300 rounded-md shadow-sm w-2/3"
+          />
+        </div>
+        <div class="mb-4 flex items-center">
+          <label for="diemMon3" class="block text-gray-700 w-1/3"
+            >Điểm môn 3:</label
+          >
+          <input
+            type="number"
+            placeholder="Nhập điểm môn 3"
+            id="diemMon3"
+            class="mt-1 block w-full border-gray-300 rounded-md shadow-sm w-2/3"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="khuVuc" class="block text-gray-700">Khu vực:</label>
+          <input
+            type="text"
+            placeholder="Nhập khu vực"
+            id="khuVuc"
+            class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="doiTuong" class="block text-gray-700">Đối tượng:</label>
+          <input
+            type="number"
+            placeholder="Nhập loại đối tượng"
+            id="doiTuong"
+            class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+          />
+        </div>
+        <div class="flex justify-center">
+          <button
+            type="button"
+            id="submitButton"
+            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            Xét tuyển
+          </button>
+        </div>
+      </form>
+      <div id="result" class="mt-4"></div>
+    </div>
+
+    <script src="./tuyensinh.js"></script>
+  </body>
+</html>

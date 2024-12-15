@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính Tiền Điện</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <h1 class="text-2xl font-bold text-center text-blue-500 mb-6">
+        Tính Tiền Điện
+      </h1>
+      <form id="electricityForm" class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700"
+            >Tên khách hàng</label
+          >
+          <input
+            type="text"
+            id="name"
+            required
+            class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring focus:ring-blue-300"
+            placeholder="Nhập tên khách hàng"
+          />
+        </div>
+        <div>
+          <label
+            for="consumedKw"
+            class="block text-sm font-medium text-gray-700"
+            >Số kW tiêu thụ</label
+          >
+          <input
+            type="number"
+            id="consumedKw"
+            min="0"
+            required
+            class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring focus:ring-blue-300"
+            placeholder="Nhập số kW tiêu thụ"
+          />
+        </div>
+        <button
+          type="button"
+          class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
+          onclick="calculateBill()"
+        >
+          Tính Tiền
+        </button>
+      </form>
+
+      <div
+        id="result"
+        class="mt-6 text-center text-lg font-semibold text-green-600"
+      ></div>
+    </div>
+
+    <script src="./Tiendien.js"></script>
+  </body>
+</html>
